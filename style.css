@@ -1,0 +1,795 @@
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #e6e6fa;
+  line-height: 1.6;
+}
+
+/* Header and Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d8bfd8;
+  position: sticky;
+  top: 0;
+  padding: 10px 20px; /* Adjusted padding for better spacing */
+  z-index: 1;
+}
+
+header img {
+  margin: 5px 0px;
+  height: 50px;
+  border: 2px solid white;
+  transition: all 0.5s ease;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #5a2f6d;
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+nav ul li .resume-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+nav ul li .resume-link:hover {
+  background-color: #5a2f6d;
+  border-radius: 5px;
+}
+
+/* Home Section */
+#home {
+  padding: 20px;
+  text-align: center;
+}
+
+#home h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+  padding-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.content-left {
+  flex: 1;
+  text-align: left;
+  max-width: 500px;
+}
+
+.content-left h2 {
+  font-size: 2em;
+  color: #5a2f6d;
+}
+
+.content-left h3 {
+  font-size: 1.5em;
+  color: #1616f5;
+}
+
+.intro-text {
+  font-size: 1.2em;
+}
+
+.action-buttons {
+  margin: 20px 0;
+  display: flex;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #c300ff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #464f54;
+}
+
+.content-right {
+  flex: 1;
+  max-width: 700px;
+  margin-left: 50px;
+}
+
+.content-right img {
+  width: 75%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.content-right img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .home-content {
+    margin: 0 20px; /* Adjust margin for medium devices */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .content-left,
+  .content-right {
+    max-width: 100%; /* Allow full width on smaller screens */
+    margin-left: 0; /* Reset left margin */
+    text-align: center; /* Center text */
+  }
+
+  .content-right {
+    margin: 20px 0 0 0; /* Add margin on top for separation */
+  }
+
+  .content-right img {
+    width: 100%; /* Ensure image is responsive */
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 2em; /* Adjust header size for smaller screens */
+  }
+
+  .content-left h2 {
+    font-size: 1.8em; /* Adjust heading size */
+  }
+
+  .content-left h3 {
+    font-size: 1.4em; /* Adjust subheading size */
+  }
+
+  .intro-text {
+    font-size: 1.1em; /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  #home h1 {
+    font-size: 1.5em; /* Further reduce header size */
+  }
+
+  .content-left h2 {
+    font-size: 1.5em; /* Further reduce heading size */
+  }
+
+  .content-left h3 {
+    font-size: 1.2em; /* Further reduce subheading size */
+  }
+
+  .intro-text {
+    font-size: 1em; /* Smaller text for better readability */
+  }
+
+  .action-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+    width: 100%; /* Full width for buttons */
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 50%; /* Make both buttons full width */
+    margin: 10px 0; /* Add space between buttons */
+    padding: 12px; /* Increase padding for better touch targets */
+    font-size: 1.1em; /* Slightly larger font for readability */
+    max-width: 300px; /* Optional max width for buttons */
+    margin: 5px 0; /* Reduced margin */
+  }
+}
+
+
+/* About Section */
+#about {
+  padding: 20px;
+  background-color: #f1e9e9;
+  text-align: center;
+  position: relative;
+}
+
+#about h2 {
+  margin-top: 0;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #333;
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.about-content {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: justify;
+}
+
+.about-left img {
+  width: 90%;
+  height: auto;
+  border-radius: 1000px;
+  transition: all 0.5s ease;
+}
+
+.about-left img:hover {
+  transform: scale(1.1);
+}
+
+.about-right {
+  transition: all 0.5s ease;
+}
+
+.hire-me-btn {
+  background-color: #c300ff;
+  margin-left: 350px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  width: 50%; /* Full width button */
+  max-width: 125px; /* Limit the width of the button */
+  border-radius: 25px; /* More rounded button */
+  transition: all 0.5s ease;
+  display: flex;
+}
+
+.hire-me-btn:hover {
+  background-color: #0056b3;
+}
+
+.hire-me-btn a {
+  margin-left: 7px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column; /* Stack items */
+    align-items: center; /* Center items */
+  }
+
+  .about-left {
+    margin-bottom: 20px; /* Add space below left content */
+  }
+
+  .hire-me-btn {
+    margin-left: 0; /* Center the button on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 2em; /* Adjust header size for smaller screens */
+  }
+
+  .about-content {
+    font-size: 1.1em; /* Slightly reduce text size */
+  }
+}
+
+@media (max-width: 480px) {
+  #about h2 {
+    font-size: 1.6em; /* Further adjust header size for small devices */
+  }
+
+  .about-content {
+    font-size: 1em; /* Smaller text for better readability */
+    padding: 0 10px; /* Add some horizontal padding */
+  }
+
+  .hire-me-btn {
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+    margin: 20px auto; /* Center button */
+  }
+}
+
+
+/* Skills Section */
+#skills h2 {
+  color: #0d1b2a;
+  font-size: 2.5em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#skills {
+text-align: center;
+margin: 50px 0;
+}
+
+.skills-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+gap: 20px;
+padding: 0 20px;
+}
+
+/* Card styling */
+.skill-card {
+background-color: #f9f9f9;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 20px;
+text-align: center;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Image inside card */
+.skill-card img {
+width: 95px;
+height: 95px;
+margin-bottom: 15px;
+object-fit: contain;
+}
+
+/* Hover effect */
+.skill-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+.skills-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+}
+
+.skill-card img {
+    width: 80px; /* Slightly reduce image size */
+    height: 80px;
+}
+}
+
+@media (max-width: 768px) {
+.skills-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+}
+
+.skill-card img {
+    width: 70px; /* Further reduce image size */
+    height: 70px;
+}
+}
+
+@media (max-width: 480px) {
+.skills-container {
+    grid-template-columns: 1fr; /* Single column on mobile */
+}
+
+.skill-card img {
+    width: 60px; /* Adjust for the smallest devices */
+    height: 60px;
+}
+}
+
+
+
+/* Projects Section */
+
+#projects {
+  padding: 20px;
+  background-color: azure;
+}
+
+#projects h2 {
+  font-size: 2.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for larger screens */
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.project-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+  color:  #006dbb;
+}
+
+.project-card a {
+  text-decoration: none;
+  color:  #6d1a91;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
+  }
+}
+
+
+/* Education Section */
+#education {
+  padding: 20px;
+  background: #e6e6fa;
+}
+
+/* Education Section */
+#education {
+  padding: 30px; /* Increased padding for better spacing */
+  background: #f0f8ff; /* Lighter background for a fresh look */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#education h2 {
+  color: #1a202c; /* Darker, modern color */
+  font-size: 2.5em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center; /* Centered h2 */
+  letter-spacing: 1px; /* Slight spacing for elegance */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centering the cards */
+  gap: 20px; /* Space between cards */
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+.card {
+  background: #ffffff; /* White background for cards */
+  border: 1px solid #dcdcdc; /* Light border */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside cards */
+  width: 300px; /* Fixed width for cards */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.card h3 {
+  color: #1a202c; /* Dark color for headings */
+  margin: 0 0 10px; /* Margin for heading */
+}
+
+.card p {
+  margin: 5px 0; /* Margin for paragraph */
+  color: #555; /* Slightly lighter color for text */
+}
+
+/* Optional: Add a footer or notes section for additional context */
+#education footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666; /* Lighter color for footer text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 400px; /* Maximum width for larger screens */
+  }
+
+  .card-container {
+    justify-content: center; /* Centering cards */
+    margin-top: 10px; /* Less margin on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #education h2 {
+    font-size: 2em; /* Slightly smaller heading */
+  }
+
+  .card {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .card h3 {
+    font-size: 1.2em; /* Smaller heading inside cards */
+  }
+}
+
+
+/* Contact Section */
+#contact {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+#contact h1 {
+  font-size: 2.5em;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-left p i {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #6d1a91;
+}
+
+.contact-left p {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #555555;
+}
+
+.contact-left p i:hover {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+  color: #007bff; /* Change color on hover */
+}
+
+.contact-left a {
+  text-decoration: none;
+  color: #555555;
+}
+
+.contact-left, 
+.contact-right {
+  flex: 1;
+  margin: 20px 0px;
+  padding-left: 50px;
+}
+
+.contact-left p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Contact Form Styling */
+.contact-right form input,
+.contact-right form textarea {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%; /* Full width for better layout */
+  max-width: 600px; /* Set a max-width for better structure */
+  border: 1px solid #5a2f6d;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for effect */
+}
+
+.contact-right form textarea {
+  height: 25px; /* Set a height for text area */
+  resize: none; /* Prevent manual resizing */
+}
+
+.contact-right form input:focus,
+.contact-right form textarea:focus {
+  outline: none;
+  border-color: #c300ff; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(195, 0, 255, 0.5); /* Focus glow effect */
+}
+
+.submit-button {
+  background-color: #c300ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  width: 100%; /* Full width button */
+  max-width: 200px; /* Limit the width of the button */
+  border-radius: 25px; /* More rounded button */
+  transition: all 0.5s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 10px rgba(0, 86, 179, 0.5); /* Glow effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center; /* Center items */
+  }
+
+  .contact-left, 
+  .contact-right {
+    padding-left: 0; /* Remove padding for smaller screens */
+    width: 100%; /* Full width for both sides */
+    max-width: 600px; /* Keep max width consistent */
+  }
+
+  .contact-right form input,
+  .contact-right form textarea {
+    max-width: 100%; /* Ensure full width for inputs */
+  }
+}
+
+@media (max-width: 480px) {
+  #contact h1 {
+    font-size: 2em; /* Slightly smaller heading for mobile */
+  }
+
+  .contact-left p {
+    font-size: 1em; /* Smaller font size for contact info */
+  }
+
+  .submit-button {
+    max-width: 100%; /* Button full width on small screens */
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: #d8bfd8;
+  color: black;
+  text-align: center;
+  padding: 5px 0px;
+}
+
+footer .footer p {
+  margin: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 10px 0; /* Increase padding for better spacing on smaller screens */
+  }
+
+  footer .footer p {
+    font-size: 0.9em; /* Slightly smaller text for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 15px 0; /* More padding for mobile */
+  }
+
+  footer .footer p {
+    font-size: 0.8em; /* Smaller font size for mobile */
+    margin: 2px; /* Reduce margin for mobile */
+  }
+}
+Effects for Section Headings */
+
+
+#home h1:hover {
+  background: linear-gradient(90deg, #c300ff, #6d1a91); /* Gradient background */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  transform: translateY(-5px); Lift effect
+}
+
+#about h2:hover {
+  background: linear-gradient(90deg, #c300ff, #6d1a91); /* Gradient background */
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  transform: translateY(-5px); 
+}
+
+
+#skills h2:hover {
+  background: linear-gradient(90deg, #c300ff, #6d1a91); /* Gradient background */
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+
+#projects h2:hover {
+  background: linear-gradient(90deg, #c300ff, #6d1a91); /* Gradient background */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show background */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+
+#education h2:hover {
+  background: linear-gradient(90deg, #c300ff, #6d1a91); /* Gradient background */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show background */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+
+#contact h1:hover {
+  background: linear-gradient(90deg, #c300ff, #6d1a91); /* Gradient background */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show background */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+
